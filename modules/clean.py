@@ -241,7 +241,6 @@ def convert_numbers_in_violation_text_to_words(text):
         # Single digit number as word
         inflect_engine = inflect.engine()
         single_digit_as_word = inflect_engine.number_to_words(single_digit)
-        # print("Number as word: {}".format(single_digit_as_word))
 
         # PATTERNS TO SEARCH
         # Exact match of single digit
@@ -256,17 +255,12 @@ def convert_numbers_in_violation_text_to_words(text):
         pattern_dash = re.compile(r'(?<=--)' + re.escape(single_digit) + r'(?![/\d])', re.DOTALL)
 
         if re.search(pattern_full_stop, text):
-            # print("{} is preceded by '. ' or '! ' or '? ' and therefore should be capitalized".format(single_digit))
             single_digit_as_word = single_digit_as_word.capitalize()
             text = re.sub(pattern_full_stop, single_digit_as_word, text)
         elif re.search(pattern_dash, text):
-            # print("{} is preceded by '--' and therefore should be capitalized".format(single_digit))
             single_digit_as_word = single_digit_as_word.capitalize()
             text = re.sub(pattern_dash, single_digit_as_word, text)
         else:
-            # print("{} is not preceded by '. ' or '--' and therefore doesn't need to be capitalized")
             text = re.sub(pattern, single_digit_as_word, text)
 
-    # New version of string
-    # print("NEW VERSION: {}".format(text))
     return text

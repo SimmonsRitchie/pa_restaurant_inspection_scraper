@@ -9,8 +9,6 @@ from config import config
 """
 AUTHOR: Daniel Simmons-Ritchie
 
-LAST UPDATED: Dec 30, 2018
-
 ABOUT: This program is designed to scrape Pa. restaurant inspections and send an email summarizing violators and non-violators.
 
 OVERVIEW: Main program loop runs in 'main' function of Program.py.
@@ -25,6 +23,7 @@ The program flows as follows:
     - Send email with text file
 
 OPTIONS:
+
 - At the top of main, a range of variables can be altered to change how the program runs.
 
 """
@@ -33,7 +32,6 @@ OPTIONS:
 def main():
     ### SETTINGS
     run_headless = True # Select true to run in headless mode (no Chrome window will display as scraping occurs) or False for non-headless
-    email_mode = "testing" # choose 'testing' to ensure emails only go to my email address, choose 'real' to send to others
     email_style = "list" # choose 'table' to send inspection data as table, choose 'list' to send as list to make it easier to copy and paste
     location_list = [("county","adams")] # set areas to be scraped as list of tuples: (county/city, name). Eg. ("city", "harrisburg") or ("county","dauphin").
     timeframe = ("sun_to_sat", 3) # This sets timeframe to scrape as tuple, options: 'sun_to_sat' or 'mon_to_sun'. Desired weeks back is any integer. Eg. ("sun_to_sat",2)
@@ -46,7 +44,6 @@ def main():
 
     ### INITIALIZE CHROME DRIVER
     driver = scraper.initialize_chrome_driver(run_headless, config)
-    # Variable below tracks whether driver has logged in to MT yet. Problems will occur if try to log into MT twice.
 
     ### SCRAPE LOOP
     for location in location_list:

@@ -26,8 +26,8 @@ Where indicated in caps, replace with your own values, preserving the quotation 
             "ENTER_EMAIL_ADDRESS1",
             "ENTER_EMAIL_ADDRESS2",
             "ENTER_EMAIL_ADDRESS3",
-        ]
-        }
+        ],
+         "chrome_driver_path": "FULL_PATH_TO_CHROME_DRIVER",
     }
 
 ### Authors
