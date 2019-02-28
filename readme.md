@@ -30,6 +30,8 @@ Where indicated in caps, replace with your own values, preserving the quotation 
          "chrome_driver_path": "FULL_PATH_TO_CHROME_DRIVER",
     }
 
+Once you've created that file, you can then adjust settings at the top of main() in program.py. You can specify specific counties/cities you would like to scrape.
+
 ### Authors
 
 Daniel Simmons-Ritchie, reporter at the Patriot-News/PennLive.com
