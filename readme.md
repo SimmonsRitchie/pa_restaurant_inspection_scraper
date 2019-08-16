@@ -1,4 +1,4 @@
-## PA. RESTAURANT INSPECTION SCRAPER
+### Pa. Restaurant Inspection Scraper
 
 This program scrapes county or city restaurant inspections from the Pa. Dept of Agriculture website and then emails a summary of violators and non-violators to a chosen email address
 
