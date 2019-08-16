@@ -14,7 +14,7 @@ MarkupSafe==1.1.1
 numpy==1.14.3
 pandas==0.24.2
 pdfminer.six==20170720
-pycryptodome==3.6.1
+pycryptodome==3.8.2
 PyJWT==1.6.4
 PySocks==1.6.8
 python-dateutil==2.7.3
