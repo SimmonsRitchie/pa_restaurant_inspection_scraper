@@ -19,11 +19,11 @@ PyJWT==1.6.4
 PySocks==1.6.8
 python-dateutil==2.7.3
 pytz==2018.4
-requests==2.18.4
+requests==2.22.0
 selenium==3.12.0
 six==1.11.0
 tl.cli==0.2
 tl.rename==0.1.2
 toml==0.10.0
 twilio==6.16.2
-urllib3==1.22
+urllib3==1.25.3
