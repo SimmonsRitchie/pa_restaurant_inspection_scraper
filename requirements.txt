@@ -26,4 +26,4 @@ tl.cli==0.2
 tl.rename==0.1.2
 toml==0.10.0
 twilio==6.16.2
-urllib3==1.25.3
+urllib3==1.25.8
